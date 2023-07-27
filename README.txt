@@ -1,4 +1,42 @@
-Instructions 
+
+    
+    DockerFile commit that launches Docker Container of ROS2 Humble
+    and has install packages for SLAM algorithm and visualization in
+    RVIZ.
+    
+    DockerFile references locally contained files (lidar_scan/) so
+    build image in directory containing both
+
+	EX: Current tree structure before I build my image. My working directory is /Athackst
+
+Athackst
+.
+├── Dockerfile
+├── lidar_scan
+│   ├── launch
+│   │   └── lidar.launch.py
+│   ├── lidar_scan
+│   │   ├── __init__.py
+│   │   └── lidar_pub.py
+│   ├── package.xml
+│   ├── resource
+│   │   └── lidar_scan
+│   ├── rviz
+│   │   └── wamv_config.rviz
+│   ├── setup.cfg
+│   ├── setup.py
+│   └── test
+│       ├── test_copyright.py
+│       ├── test_flake8.py
+│       └── test_pep257.py
+├── README.txt
+└── tahseen.rviz
+
+6 directories, 14 files
+
+
+
+Instructions for when in Docker Container
 
 1. cd into home directory 
 2. source /opt/ros/humble/setup.bash 
